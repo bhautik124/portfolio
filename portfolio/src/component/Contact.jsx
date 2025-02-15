@@ -1,17 +1,16 @@
 import React, { useEffect } from "react";
-import Waves from "./home wawes/HomeLine";
-import { SiPolestar } from "react-icons/si";
+
 import { MdOutlineEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
-import Magnet from "./button animation/Buton";
+
 import FallingText from "./gravity text/FallingText";
 import { motion } from "framer-motion";
 import DecryptedText from "./decrypt text/Decrypted";
-const Home = () => {
+const Contact = ({ onClose }) => {
   return (
     <div className="p-3 bg-[#160000] ">
       {/* first section */}
-      <div className="border border-[#160000] bg-[#F40C3F] w-full min-h-screen">
+      <div className="border border-[#160000] bg-[#F40C3F] w-full">
         <nav className="text-black flex items-center justify-between px-4 md:py-5 relative border-b border-[#160000]">
           {/* Left Icon with Line */}
           <Link to="/">
@@ -54,103 +53,13 @@ const Home = () => {
             </a>
           </div>
         </nav>
-
-        {/* Waves Section with responsive height */}
-        <div className="mt-5 md:mt-4 relative h-[390px] md:h-[450px]">
-          <Waves />
-        </div>
-
-        <div className="border mt-5 border-[#160000]"></div>
-
-        {/* Title Section - Stacked on mobile */}
-        <div className="text-[#160000] flex flex-col md:flex-row items-center text-6xl md:text-9xl font-bold p-3 tracking-tighter gap-3 font-homepage">
-          <h3>FULLSTACK</h3>
-          <SiPolestar className="hidden md:block" />
-          <h3>DEVELOPER</h3>
-        </div>
       </div>
 
       {/* all section */}
       <div className="bg-[#F40C3F] w-full min-h-screen p-1 pb-10">
         <div className="mt-10 border border-black rounded-md max-w-6xl mx-auto">
-          {/* about section */}
-          <div className="p-10">
-            <div className="text-center">
-              <h3 className="text-7xl font-bold font-heading">ABOUT ME</h3>
-            </div>
-
-            <div className="text-start mt-10">
-              <h3 className="leading-normal	 font-normal text-3xl font-aboutText">
-                Hi, I’m Bhautik Sangani—a Fullstack Developer building dynamic
-                web experiences with the MERN stack. I bridge creativity and
-                code to craft scalable solutions, blending modern tools
-                (React.js, TypeScript). Let’s not just write software—let’s
-                engineer innovation that users love. Ready to redefine what’s
-                possible?
-              </h3>
-            </div>
-          </div>
-
-          {/* skill section */}
-          <div className=" mt-20">
-            <div className="text-center">
-              <h3 className="text-7xl font-bold font-heading">SKILL SET</h3>
-            </div>
-            <div className="text-center mt-10">
-              <div className="w-full  p-5 rounded-md border border-black">
-                <h3 className="text-3xl uppercase font-normal font-aboutText">
-                  {" "}
-                  Frontend <br />{" "}
-                  <span className="block mt-4 text-7xl font-black">
-                    HTML, CSS, JavaScript
-                  </span>
-                </h3>
-              </div>
-              <div className="w-full p-5 rounded-md border border-black">
-                <h3 className="text-3xl uppercase font-normal font-aboutText">
-                  Frameworks & Libraries <br />{" "}
-                  <span className="block mt-4 text-7xl font-black">
-                    React.js, TypeScript
-                  </span>
-                </h3>
-              </div>
-              <div className="w-full p-5 rounded-md border border-black">
-                <h3 className="text-3xl uppercase font-normal font-aboutText">
-                  Backend <br />
-                  <span className="block mt-4 text-7xl font-black">
-                    Node.js, Express.js, MongoDB
-                  </span>
-                </h3>
-              </div>
-              <div className="w-full p-5 rounded-md border border-black">
-                <h3 className="text-3xl uppercase font-normal font-aboutText">
-                  Architecture <br />
-                  <span className="block mt-4 text-7xl font-black">
-                    Microservices
-                  </span>
-                </h3>
-              </div>
-            </div>
-          </div>
-
-          {/* work section */}
-          <div className=" mt-20">
-            <div className="text-center">
-              <h3 className="text-7xl font-bold font-heading">WORK</h3>
-            </div>
-            <div className="text-center mt-10 pb-10">
-              <Link to="/work">
-                <Magnet padding={50} disabled={false} magnetStrength={3}>
-                  <button className="px-6 py-3 text-black font-bold text-lg rounded-md border-2 border-black shadow-lg">
-                    Click to See!
-                  </button>
-                </Magnet>
-              </Link>
-            </div>
-          </div>
-
           {/* contact section */}
-          <div className="mt-10 border border-black w-full h-screen relative overflow-hidden">
+          <div className="mt-10  w-full h-screen relative overflow-hidden">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -170,12 +79,12 @@ const Home = () => {
                 trigger="scroll"
                 backgroundColor="transparent"
                 wireframes={false}
-                gravity={0.56}
+                gravity={0.25}
                 fontSize="2rem"
                 mouseConstraintStiffness={0.9}
               />
             </motion.div>
-
+            
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-full text-center cursor-pointer">
               <div className="w-1/2 text-8xl font-bold font-aboutText uppercase mx-auto">
                 <a
@@ -208,4 +117,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Contact;

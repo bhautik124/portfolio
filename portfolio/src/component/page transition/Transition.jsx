@@ -20,7 +20,7 @@ const Transition = ({ Page }) => {
             {Array.from({ length: 11 }).map((_, blockIndex) => (
               <motion.div
                 key={blockIndex}
-                className="flex-1 bg-[#F40C3F] -m-[0.25px]"
+                className="flex-1 bg-black -m-[0.25px]"
                 initial={{ scaleY: 1 }}
                 animate={{ scaleY: 0 }}
                 exit={{ scaleY: 0 }}

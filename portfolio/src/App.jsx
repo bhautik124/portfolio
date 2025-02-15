@@ -6,11 +6,11 @@ import {
   useLocation,
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import SecondImageDetail from "./component/SecondImageDetail.jsx";
-import ThirdImageDetail from "./component/ThirdImageDetail.jsx";
-import Transition from "./component/Transition.jsx";
+import Transition from "./component/page transition/Transition.jsx";
 import Home from "./component/Home.jsx";
 import About from "./component/About.jsx";
+import Worksection from "./component/Worksection.jsx";
+import Contact from "./component/Contact.jsx";
 
 const App = () => {
   const location = useLocation();
@@ -20,16 +20,10 @@ const App = () => {
       {/* <CustomCursor /> */}
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Transition Page={Home} />} />
           <Route path="/about" element={<Transition Page={About} />} />
-          <Route
-            path="/work"
-            element={<Transition Page={SecondImageDetail} />}
-          />
-          <Route
-            path="/contact"
-            element={<Transition Page={ThirdImageDetail} />}
-          />
+          <Route path="/work" element={<Transition Page={Worksection} />} />
+          <Route path="/contact" element={<Transition Page={Contact} />} />
         </Routes>
       </AnimatePresence>
     </div>
