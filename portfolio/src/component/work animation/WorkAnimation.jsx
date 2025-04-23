@@ -960,7 +960,7 @@ class InfiniteGridMenu {
     gl.enable(gl.CULL_FACE);
     gl.enable(gl.DEPTH_TEST);
 
-    gl.clearColor(0, 0, 0, 0);
+    gl.clearColor(0.9, 0.94, 1, 1);  // Light blue-white color
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
     gl.uniformMatrix4fv(
@@ -1226,7 +1226,7 @@ export default function InfiniteMenu({ items = [] }) {
                 width: "clamp(40px, 10vw, 60px)",
                 height: "clamp(40px, 10vw, 60px)",
               }}
-              className={`grid place-items-center border-[2px] border-white rounded-full cursor-pointer transition-all ease-[cubic-bezier(0.25,0.1,0.25,1.0)] ${
+              className={`grid place-items-center border-[2px] border-black rounded-full cursor-pointer transition-all ease-[cubic-bezier(0.25,0.1,0.25,1.0)] ${
                 isMoving
                   ? "opacity-0 pointer-events-none duration-100 scale-0"
                   : "opacity-100 pointer-events-auto duration-500 scale-100"
@@ -1234,7 +1234,7 @@ export default function InfiniteMenu({ items = [] }) {
             >
               <p
                 style={{ fontSize: "clamp(20px, 5vw, 26px)" }}
-                className="select-none relative text-white top-[2px]"
+                className="select-none relative text-black top-[2px]"
               >
                 &#x2197;
               </p>
@@ -1247,7 +1247,7 @@ export default function InfiniteMenu({ items = [] }) {
                 width: "clamp(40px, 10vw, 60px)",
                 height: "clamp(40px, 10vw, 60px)",
               }}
-              className={`grid place-items-center border-[2px] border-white rounded-full cursor-pointer transition-all ease-[cubic-bezier(0.25,0.1,0.25,1.0)] ${
+              className={`grid place-items-center border-[2px] border-black rounded-full cursor-pointer transition-all ease-[cubic-bezier(0.25,0.1,0.25,1.0)] ${
                 isMoving
                   ? "opacity-0 pointer-events-none duration-100 scale-0"
                   : "opacity-100 pointer-events-auto duration-500 scale-100"
@@ -1255,7 +1255,7 @@ export default function InfiniteMenu({ items = [] }) {
             >
               <p
                 style={{ fontSize: "clamp(20px, 5vw, 26px)" }}
-                className="select-none relative text-white top-[2px]"
+                className="select-none relative text-black top-[2px]"
               >
                 <GoHome />
 

@@ -60,7 +60,7 @@ class Noise {
 }
 
 export default function Waves({
-  lineColor = "#160000",
+  lineColor = "black",
   backgroundColor = "transparent",
   waveSpeedX = 0.0125,
   waveSpeedY = 0.005,

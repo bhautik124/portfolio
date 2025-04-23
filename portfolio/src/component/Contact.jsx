@@ -10,7 +10,7 @@ const Contact = ({ onClose }) => {
   return (
     <div className="p-3 bg-[#160000] ">
       {/* first section */}
-      <div className="border border-[#160000] bg-[#F40C3F] w-full">
+      <div className="border border-[#160000] bg-[linear-gradient(135deg,_#ffffff,_#e6f0ff)] w-full">
         <nav className="text-black flex items-center justify-between px-4 md:py-5 relative border-b border-[#160000]">
           {/* Left Icon with Line */}
           <Link to="/">
@@ -56,7 +56,7 @@ const Contact = ({ onClose }) => {
       </div>
 
       {/* all section */}
-      <div className="bg-[#F40C3F] w-full min-h-screen p-1 pb-10">
+      <div className="bg-[linear-gradient(135deg,_#ffffff,_#e6f0ff)] w-full min-h-screen p-1 pb-10">
         <div className="mt-10 border border-black rounded-md max-w-6xl mx-auto">
           {/* contact section */}
           <div className="mt-10  w-full h-screen relative overflow-hidden">
