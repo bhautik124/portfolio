@@ -4,28 +4,28 @@ import InfiniteMenu from "./work animation/WorkAnimation";
 const Worksection = () => {
   const items = [
     {
-      image: "public/images/airline.jpg",
+      image: "/images/airline.jpg",
       link: "https://google.com/",
       title: "Airline Booking",
       description:
         "Built a responsive ReactJS app with flight info and booking via APIs.",
     },
     {
-      image: "public/images/study.jpg",
+      image: "/images/study.jpg",
       link: "https://google.com/",
       title: "Study Platform",
       description:
         "Built an online learning platform with ReactJS, Material-UI, and a full course catalog.",
     },
     {
-      image: "public/images/ecommerce.png",
+      image: "/images/ecommerce.png",
       link: "https://google.com/",
       title: "E-commerce Site",
       description:
         "Full-stack project with React, Node, Express, MongoDB, and GSAP for modern animated UI.",
     },
     {
-      image: "public/images/api.jpg",
+      image: "/images/api.jpg",
       link: "https://google.com/",
       title: "GenAPI Hub & AIChat",
       description:

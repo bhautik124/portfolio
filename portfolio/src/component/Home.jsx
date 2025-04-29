@@ -18,7 +18,7 @@ const Home = () => {
         <nav className="hidden sm:flex text-black items-center justify-between px-4 py-5 border-b border-black">
           {/* Left Section */}
           <Link to="/" className="flex items-center">
-            <img src="public/images/logo2.png" alt="Logo" className="w-20 h-20" />
+            <img src="images/logo2.png" alt="Logo" className="w-20 h-20" />
             <div className="w-px h-20 bg-black mx-2"></div>
           </Link>
 
