@@ -4,33 +4,37 @@ import InfiniteMenu from "./work animation/WorkAnimation";
 const Worksection = () => {
   const items = [
     {
-      image: "src/images/1.png",
+      image: "src/images/airline.jpg",
       link: "https://google.com/",
-      title: "Item 1",
-      description: "This is pretty cool, right?",
+      title: "Airline Booking",
+      description:
+        "Built a responsive ReactJS app with flight info and booking via APIs.",
     },
     {
-      image: "https://picsum.photos/400/400?grayscale",
+      image: "src/images/study.jpg",
       link: "https://google.com/",
-      title: "Item 2",
-      description: "This is pretty cool, right?",
+      title: "Study Platform",
+      description:
+        "Built an online learning platform with ReactJS, Material-UI, and a full course catalog.",
     },
     {
-      image: "https://picsum.photos/500/500?grayscale",
+      image: "src/images/ecommerce.png",
       link: "https://google.com/",
-      title: "Item 3",
-      description: "This is pretty cool, right?",
+      title: "E-commerce Site",
+      description:
+        "Full-stack project with React, Node, Express, MongoDB, and GSAP for modern animated UI.",
     },
     {
-      image: "https://picsum.photos/600/600?grayscale",
+      image: "src/images/api.jpg",
       link: "https://google.com/",
-      title: "Item 4",
-      description: "This is pretty cool, right?",
+      title: "GenAPI Hub & AIChat",
+      description:
+        "MERN platform for instant APIs, no-code auth, and AI-driven responses, simplifying backend dev.",
     },
   ];
   return (
     <div className="h-full relative text-black bg-[linear-gradient(135deg,_#ffffff,_#e6f0ff)]">
-      <InfiniteMenu  items={items} />
+      <InfiniteMenu items={items} />
     </div>
   );
 };

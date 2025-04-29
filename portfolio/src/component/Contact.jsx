@@ -84,7 +84,7 @@ const Contact = ({ onClose }) => {
                 mouseConstraintStiffness={0.9}
               />
             </motion.div>
-            
+
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-full text-center cursor-pointer">
               <div className="w-1/2 text-8xl font-bold font-aboutText uppercase mx-auto">
                 <a

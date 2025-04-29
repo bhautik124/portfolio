@@ -1174,7 +1174,7 @@ export default function InfiniteMenu({ items = [] }) {
       {activeItem && (
         <>
           <h2
-            style={{ fontSize: "clamp(2rem, 8vw, 4rem)" }}
+            style={{ fontSize: "clamp(2rem, 8vw, 2.5rem)" }}
             className={`select-none absolute font-black left-1/2 md:left-[1.6em] top-[20%] md:top-1/2 transform -translate-x-1/2 md:translate-x-0 -translate-y-1/2 transition-all ease-[cubic-bezier(0.25,0.1,0.25,1.0)] ${
               isMoving
                 ? "opacity-0 pointer-events-none duration-100 md:translate-x-[20%]"
@@ -1189,7 +1189,7 @@ export default function InfiniteMenu({ items = [] }) {
               fontSize: "clamp(1rem, 3vw, 1.5rem)",
               maxWidth: "min(10ch, 80vw)",
             }}
-            className={`select-none absolute top-1/2 right-[5%] md:right-[1%] transform -translate-y-1/2 transition-all ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hidden md:block ${
+            className={`font-bold select-none absolute top-1/2 right-[5%] md:right-[1%] transform -translate-y-1/2 transition-all ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hidden md:block ${
               isMoving
                 ? "opacity-0 pointer-events-none duration-100 translate-x-[-60%]"
                 : "opacity-100 pointer-events-auto duration-500 translate-x-[-90%]"
