@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-
 import { MdOutlineEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
-
+import { SiLinkedin } from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
 import FallingText from "./gravity text/FallingText";
 import { motion } from "framer-motion";
 import DecryptedText from "./decrypt text/Decrypted";
@@ -12,11 +12,11 @@ const Contact = ({ onClose }) => {
       {/* first section */}
       <div className="border border-[#160000] bg-[linear-gradient(135deg,_#ffffff,_#e6f0ff)] w-full">
         <nav className="text-black flex items-center justify-between px-4 md:py-5 relative border-b border-[#160000]">
-          {/* Left Icon with Line */}
-          <Link to="/">
+          {/* Left Icon with Line - Add flex-shrink-0 */}
+          <Link to="/" className="flex-shrink-0">
             <div className="flex items-center">
               <img
-                src="src/images/logo2.png"
+                src="/images/logo2.png"
                 alt="Logo"
                 className="md:w-20 md:h-20 w-10 h-8"
               />
@@ -24,8 +24,8 @@ const Contact = ({ onClose }) => {
             </div>
           </Link>
 
-          {/* Center Text */}
-          <div className="flex gap-10 justify-center items-center cursor-pointer">
+          {/* Center Text - Use absolute positioning */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 flex gap-10 items-center cursor-pointer">
             <div className="w-px h-20 bg-[#160000] mx-2"></div>
             <Link to="/about">
               <h1 className="md:text-4xl text-3xl font-bold tracking-tight font-heading text-[#160000]">
@@ -45,12 +45,41 @@ const Contact = ({ onClose }) => {
             <div className="w-px h-20 bg-[#160000] mx-2"></div>
           </div>
 
-          {/* Right QR Code with Line */}
-          <div className="flex items-center text-[#160000] text-3xl md:text-7xl">
-            <div className="w-px h-20 bg-[#160000] mx-2"></div>
-            <a href="mailto:sanganibhumit421@gmail.com">
-              <MdOutlineEmail className="cursor-pointer" />
-            </a>
+          {/* Right icons - Add flex-shrink-0 */}
+          <div className="flex-shrink-0 flex items-center text-[#160000] text-3xl md:text-7xl gap-4">
+            <div className="flex items-center">
+              <div className="w-px h-20 bg-[#160000] mx-2"></div>
+              <a
+                href="https://www.linkedin.com/in/bhautik-sangani-38781b257"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SiLinkedin className="cursor-pointer" />
+              </a>
+              <div className="w-px h-20 bg-[#160000] mx-2"></div>
+            </div>
+
+            {/* Email */}
+            <div className="flex items-center">
+              <div className="w-px h-20 bg-[#160000] mx-2"></div>
+              <a href="mailto:sanganibhumit421@gmail.com">
+                <MdOutlineEmail className="cursor-pointer" />
+              </a>
+              <div className="w-px h-20 bg-[#160000] mx-2"></div>
+            </div>
+
+            {/* GitHub */}
+            <div className="flex items-center">
+              <div className="w-px h-20 bg-[#160000] mx-2"></div>
+              <a
+                href="https://github.com/bhautik124"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub className="cursor-pointer" />
+              </a>
+              <div className="w-px h-20 bg-[#160000] mx-2"></div>
+            </div>
           </div>
         </nav>
       </div>

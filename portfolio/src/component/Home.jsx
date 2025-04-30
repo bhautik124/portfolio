@@ -1,6 +1,7 @@
 import React from "react";
 import Waves from "./home wawes/HomeLine";
 import { SiPolestar, SiLinkedin } from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Magnet from "./button animation/Buton";
@@ -12,18 +13,19 @@ const Home = () => {
   return (
     <div className="p-1 sm:p-3 bg-black">
       {/* First Section */}
-
       <div className="border border-black bg-[linear-gradient(135deg,_#ffffff,_#e6f0ff)] w-full min-h-full">
         {/* Desktop Navbar (Hidden on Mobile) */}
         <nav className="hidden sm:flex text-black items-center justify-between px-4 py-5 border-b border-black">
-          {/* Left Section */}
-          <Link to="/" className="flex items-center">
-            <img src="images/logo2.png" alt="Logo" className="w-20 h-20" />
-            <div className="w-px h-20 bg-black mx-2"></div>
-          </Link>
+          {/* Left Section - Grow to push center */}
+          <div className="flex-1 flex items-center">
+            <Link to="/" className="flex items-center">
+              <img src="images/logo2.png" alt="Logo" className="w-20 h-20" />
+              <div className="w-px h-20 bg-black mx-2"></div>
+            </Link>
+          </div>
 
-          {/* Center Links */}
-          <div className="flex gap-10 items-center">
+          {/* Center Links - Auto margins for centering */}
+          <div className="flex gap-10 items-center mx-4">
             <div className="w-px h-20 bg-black"></div>
             <Link to="/about" className="text-4xl font-heading">
               ABOUT
@@ -37,18 +39,27 @@ const Home = () => {
             <div className="w-px h-20 bg-black"></div>
           </div>
 
-          {/* Right Icons */}
-          <div className="flex items-center gap-2 text-7xl">
+          {/* Right Icons - Grow and justify-end to push to right */}
+          <div className="flex-1 flex items-center justify-end gap-2 text-7xl">
             <div className="w-px h-20 bg-black"></div>
             <a
               href="https://www.linkedin.com/in/bhautik-sangani-38781b257"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <SiLinkedin className="text-7xl p-2" />
             </a>
             <div className="w-px h-20 bg-black"></div>
             <a href="mailto:sanganibhumit421@gmail.com">
-              <MdOutlineEmail />
+              <MdOutlineEmail className="text-7xl p-2" />
+            </a>
+            <div className="w-px h-20 bg-black"></div>
+            <a
+              href="https://github.com/bhautik124"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="text-7xl p-2" />
             </a>
             <div className="w-px h-20 bg-black"></div>
           </div>
@@ -58,13 +69,13 @@ const Home = () => {
         <div className="sm:hidden flex justify-between items-center px-4 h-[10vh] border-b border-black">
           {/* Left Logo + Line */}
           <div className="flex items-center">
-            <img src="src/images/logo2.png" alt="Logo" className="w-12 h-10" />
+            <img src="/images/logo2.png" alt="Logo" className="w-12 h-10" />
             <div className="w-px h-14 bg-black mx-3"></div>
           </div>
 
           {/* Right Icons with Lines */}
-
           <div className="flex items-center gap-4">
+            {/* LinkedIn */}
             <div className="flex items-center">
               <div className="w-px h-12 bg-black"></div>
               <a
@@ -76,10 +87,25 @@ const Home = () => {
               </a>
               <div className="w-px h-12 bg-black"></div>
             </div>
+
+            {/* Email */}
             <div className="flex items-center">
               <div className="w-px h-12 bg-black"></div>
               <a href="mailto:sanganibhumit421@gmail.com">
                 <MdOutlineEmail className="text-5xl mx-3" />
+              </a>
+              <div className="w-px h-12 bg-black"></div>
+            </div>
+
+            {/* GitHub */}
+            <div className="flex items-center">
+              <div className="w-px h-12 bg-black"></div>
+              <a
+                href="https://github.com/bhautik124"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub className="text-4xl mx-3" />
               </a>
               <div className="w-px h-12 bg-black"></div>
             </div>
@@ -101,7 +127,6 @@ const Home = () => {
       </div>
 
       {/* Rest of the code remains same as before */}
-
       <div className="bg-[linear-gradient(135deg,_#ffffff,_#e6f0ff)] w-full min-h-screen p-1 pb-10 text-black">
         <div className="mt-5 sm:mt-10 border border-black rounded-md max-w-6xl mx-auto">
           {/* About Section */}
@@ -245,3 +270,4 @@ const Home = () => {
 };
 
 export default Home;
+
